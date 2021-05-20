@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin Goodslist</title>
+    <script src="https://kit.fontawesome.com/e6f78261b2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/admin_nav.css">
+    <link rel="stylesheet" href="./css/admin_Goodslist.css">
+</head>
+<body>
+    <nav>
+        <div class="side-title"><a href="#">관리자 모드</a></div>
+        <ul class="side-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">회원관리</a></li>
+            <li class="menu-dropdown">
+                <a href="#">게시판 관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu-dropdown">
+                <a href="#">상품관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown hide">
+                    <li><a href="#">상품 등록</a></li>
+                    <li><a href="#">상품 목록</a></li>
+                </ul>
+            </li>
+            <li><a href='#''>주문관리</a></li>
+            <li><a href='#'>운영설정</a></li>
+            <li><a href='#'>관리자 정보수정</a></li>
+            <li><a href='#'>LOGOUT</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form class= "search-form" id="search-form" method="get" action="#">
+            <div class="form-group">
+                <label class="form-label">판매상태</label>
+                <span>
+                    <label><input type="radio" name="salestatus" value="onsale" checked>정상판매</label>
+                    &nbsp;
+                    <label><input type="radio" name="salestatus" value="soldout">품절</label>
+                </span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">상품분류</label>
+                <span>
+                    <select name="cmode">
+                        <option value="whole">전체</option>
+                        <option value="outer">OUTER</option>
+                        <option value="top">TOP</option>
+                        <option value="shirts">SHIRTS</option>
+                        <option value="bottom">BOTTOM</option>
+                        <option value="acc">ACC</option>
+                        <option value="shoes">SHOES</option>
+                        <option value="7dc">NEW 7% DC</option>
+                        <option value="best30">BEST30</option>
+                        <option value="sale">SALE</option>
+                    </select>
+                </span>
+            </div>
+            <div class="form-group">
+                <label class="form-label">상품명</label>
+                <span>
+                    <input type="text" name="item_name">
+                </span>
+            </div>
+            <div class="search-submit-box">
+                <input type="submit" class="search-submit" value="검색">
+            </div>
+        </form>
+
+        <div class="goods-box">
+            <div class="goods-box-top">
+                <div>
+                    선택된상품을
+                    <select>
+                        <option value="onsale">정상판매</option>
+                        <option value="soldout">품절</option>
+                        <option value="deletegoods">상품삭제</option>
+                    </select>
+                    <input type="button" value="처리">
+                </div>
+                <div class="num-searched-box">
+                    총 <b class="num-searched">0</b> 개의 상품이 검색되었습니다.
+                </div>
+            </div>
+            <table class="user-table">
+                <colgroup>
+                    <col width="10%"/>
+                    <col width="10%"/>
+                    <col width="65%"/>
+                    <col width="15%"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox-selectall"></th>
+                        <th colspan="2">상품정보</th>
+                        <th>판매상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox-select"></td>
+                        <td><img src="image/리뷰사진2.JPG" width="70px"></td>
+                        <td>
+                            <div class="item-name item-info"><a href="#">베이직 카고 팬츠</a></div>
+                            <div class="item-classification item-info">분류 : BOTTOM</div>
+                            <div class="item-price item-info">가격 : 14000원</div>
+                        </td>
+                        <td><input type="button" value="판매중"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagenate">
+                <ul class="pagenation">
+                    <li class="pagenatebtn-prev"><a href="#">prev</a></li>
+                    <li class="pagenatebtn"><a href="#">1</a></li>
+                    <li class="pagenatebtn"><a href="#">2</a></li>
+                    <li class="pagenatebtn"><a href="#">3</a></li>
+                    <li class="pagenatebtn"><a href="#">4</a></li>
+                    <li class="pagenatebtn"><a href="#">5</a></li>
+                    <li class="pagenatebtn-next"><a href="#">next</a></li>
+                </ul>
+            </div>     
+        </div>
+    </section>
+    <script src="js/admin_nav.js"></script>
+</body>
+</html>

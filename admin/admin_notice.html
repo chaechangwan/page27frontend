@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin notice</title>
+    <script src="https://kit.fontawesome.com/e6f78261b2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/admin_nav.css">
+    <link rel="stylesheet" href="./css/admin_notice.css">
+</head>
+<body>
+    <nav>
+        <div class="side-title"><a href="#">관리자 모드</a></div>
+        <ul class="side-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">회원관리</a></li>
+            <li class="menu-dropdown">
+                <a href="#">게시판 관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu-dropdown">
+                <a href="#">상품관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown hide">
+                    <li><a href="#">상품 등록</a></li>
+                    <li><a href="#">상품 목록</a></li>
+                </ul>
+            </li>
+            <li><a href='#''>주문관리</a></li>
+            <li><a href='#'>운영설정</a></li>
+            <li><a href='#'>관리자 정보수정</a></li>
+            <li><a href='#'>LOGOUT</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="notice-box">
+            <div class="num-searched-box">
+                총 <b class="num-searched">0</b> 건의 공지사항이 등록되어 있습니다.
+            </div>
+            <table class="notice-table">
+                <colgroup>
+                    <col width="5%"/>
+                    <col width="30%"/>
+                    <col width="35%"/>
+                    <col width="20%"/>
+                    <col width="10%"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox-selectall"></th>
+                        <th>제목</th>
+                        <th>내용</th>
+                        <th>등록일자</th>
+                        <th>수정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox-select"></td>
+                        <td>+사이즈 측정방법</td>
+                        <td></td>
+                        <td>2021-04-20</td>
+                        <td><input type="button" value="수정" class="modifybtn table-btn"></td>
+                    </tr>                          
+                    <tr>
+                        <td><input type="checkbox" class="checkbox-select"></td>
+                        <td>+회원가입시 적립금 및 예치금 안내</td>
+                        <td>
+                            <div class="notice-flex">
+                                <div class="notice-content">
+                                    페이지27 가족이 되신 고객님께 적립금 2,000원을 드리고 있으며, 1일 1회 가능하오니 참고 부탁드리겠습니다.
+                                </div>
+                            </div>
+                        </td>
+                        <td>2021-04-21</td>
+                        <td><input type="button" value="수정" class="modifybtn table-btn"></td>
+                    </tr>                          
+                </tbody>
+            </table>
+            <div class="bottombtn-box">
+                <input type="button" value="전체선택" class="selectallbtn bottombtn">
+                <input type="button" value="선택삭제" class="bottom-deletebtn bottombtn">
+                <input type="button" value="글쓰기" class="writebtn bottombtn">
+            </div>
+            <div class="pagenate">
+                <ul class="pagenation">
+                    <li class="pagenatebtn-prev"><a href="#">prev</a></li>
+                    <li class="pagenatebtn"><a href="#">1</a></li>
+                    <li class="pagenatebtn"><a href="#">2</a></li>
+                    <li class="pagenatebtn"><a href="#">3</a></li>
+                    <li class="pagenatebtn"><a href="#">4</a></li>
+                    <li class="pagenatebtn"><a href="#">5</a></li>
+                    <li class="pagenatebtn-next"><a href="#">next</a></li>
+                </ul>
+            </div>     
+        </div>
+    </section>
+    <script src="js/admin_nav.js"></script>
+</body>
+</html>

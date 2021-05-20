@@ -1,0 +1,78 @@
+/*section*/
+section {
+    display: flex;
+    background-color: var(--section-background-color);
+    height: 100%;
+    padding: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    background-color: var(--item-background-color);
+    border: 1px solid var(--item-border-color);
+    padding: 15px 30px;
+    height: 640px;
+}
+
+.item .item-caption {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--table-line-color);
+    margin-bottom: 20px;
+    color : var(--caption-color);
+}
+.item .item-caption .item-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-content .subject-label {
+    font-size: 15px;
+    color: var(--caption-color);
+}
+
+.item-content .subject-label .subject {
+    border: 1px solid var(--table-line-color);
+    width: 660px;
+    height: 22px;
+}
+
+.item-content .editor {
+    margin-top: 10px;
+    width: 725px;
+}
+
+.bottom {
+    margin-top: 20px;
+}
+
+.bottombtn {
+    display: flex;
+}
+
+input[type='button']{
+    color: var(--nav-font-color);
+    border: 1px solid var(--item-border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--btn-blue);
+    padding: 6px 12px;
+    margin: 0px 3px;
+}
+
+.bottom .bottombtn .submitbtn {
+    background-color: var(--btn-green);
+}
+
+input[type='button']:hover {
+    filter: brightness(80%);
+}
+
+
+
+
+

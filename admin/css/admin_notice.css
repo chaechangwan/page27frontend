@@ -1,0 +1,116 @@
+/*section*/
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--section-background-color);
+    height: 100%;
+    align-items: center;
+    padding: 80px;
+}
+
+section .notice-box{
+    width: 80%;
+}
+section .notice-box .num-searched-box {
+    padding: 5px 5px;
+}
+
+table{
+    width: 100%;
+    background-color: var(--item-background-color);
+    border: 1px solid var(--item-border-color);
+    border-collapse: collapse;
+    font-size: 14px;
+}
+td, th {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+th {
+    background-color: var(--table-head-color);
+    color:var(--nav-font-color)
+}
+td {
+    border-top: 1px solid var(--table-line-color)
+}
+input[type=checkbox] {
+    zoom: 1.5;
+}
+input[type='button'] {
+    color: var(--nav-font-color);
+    border: 1px solid var(--item-border-color);
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+input[type='button']:hover {
+    filter: brightness(80%);
+}
+.modifybtn {
+    background-color: var(--btn-blue);
+}
+
+section .notice-box .notice-content {
+    display: inline-block;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    /* 여러 줄 자르기 추가 스타일 */ 
+    white-space: normal; 
+    line-height: 1.4; 
+    /* 숨김 부분 처리 스타일*/
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box; 
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+section .notice-box .bottombtn-box {
+    display: flex;
+    margin-top: 10px;
+    padding-right: 15px;
+
+}
+section .notice-box .bottombtn-box .bottombtn {
+    padding : 5px 10px;
+}
+section .notice-box .bottombtn-box .selectallbtn {
+    background-color: var(--btn-blue);
+}
+section .notice-box .bottombtn-box .bottom-deletebtn {
+    background-color: var(--btn-red);
+    margin-left: 5px;
+}
+section .notice-box .bottombtn-box .writebtn {
+    padding : 5px 15px;
+    margin-left: auto;
+    background-color: #26b99a;
+}
+
+
+section .notice-box .pagenate {
+    display: flex;
+    justify-content: center;
+}
+
+section .notice-box .pagenation {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--pagenation-color);
+    align-items: center;
+    border-radius: 3px;
+}
+
+section .notice-box .pagenation li {
+    padding: 5px 10px;
+}
+
+section .notice-box .pagenation a{
+    text-decoration: none;
+    color: var(--caption-color);
+}

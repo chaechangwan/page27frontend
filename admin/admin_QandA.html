@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin Q&A</title>
+    <script src="https://kit.fontawesome.com/e6f78261b2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/admin_nav.css">
+    <link rel="stylesheet" href="./css/admin_QandA.css">
+</head>
+<body>
+    <nav>
+        <div class="side-title"><a href="#">관리자 모드</a></div>
+        <ul class="side-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">회원관리</a></li>
+            <li class="menu-dropdown">
+                <a href="#">게시판 관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu-dropdown">
+                <a href="#">상품관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown hide">
+                    <li><a href="#">상품 등록</a></li>
+                    <li><a href="#">상품 목록</a></li>
+                </ul>
+            </li>
+            <li><a href='#''>주문관리</a></li>
+            <li><a href='#'>운영설정</a></li>
+            <li><a href='#'>관리자 정보수정</a></li>
+            <li><a href='#'>LOGOUT</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form class= "search-form" id="search-form" method="get" action="#">
+            <select name="smode" class="search-mode search-item" form="search-form">
+                <option value="userid">전체</option>
+                <option value="username">상품</option>
+                <option value="phone">배송</option>
+            </select>
+            <input type="text" name="sinput" class="search-input search-item">
+            <input type="submit" class="search-submit search-item" value="검색">
+        </form>
+        <div class="user-box">
+            <div class="num-searched-box">
+                총 <b class="num-searched">0</b> 건의 Q&A가 검색되었습니다
+            </div>
+            <table class="user-table">
+                <colgroup>
+                    <col width="5%"/>
+                    <col width="10%"/>
+                    <col width="5%"/>
+                    <col width="15%"/>
+                    <col width="35%"/>
+                    <col width="10%"/>
+                    <col width="10%"/>
+                    <col width="10%"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox-selectall"></th>
+                        <th>상품/배송</th>
+                        <th colspan="2">상품정보</th>
+                        <th>문의내용</th>
+                        <th>작성자</th>
+                        <th>등록일자</th>
+                        <th>답변달기</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox-select"></td>
+                        <td>상품</td>
+                        <td><img src="./image/리뷰사진.JPG" alt="사진"></td>
+                        <td>소프트 반팔셔츠</td>
+                        <td>
+                            <div class="question-box-flex question-box">
+                                <div class="question-closed question-content">혹시 원단이 벨기에산 원단이라는 게 사실인가요? 반팔 셔츠라 여름에 입고싶어요. 이거 입고 수영장 가도 되나요. 제가 물을 좋아하거든요. 별명이 물개였어요 하하하. 사실 수영선수랍니다. 100미터 10초대에 자유형으로 주파 가능합니다. 하하하하하하하</div>
+                                <span class="view">view</span>
+                            </div>
+                        </td>
+                        <td>채창완(sejchae)</td>
+                        <td>2021-04-20</td>
+                        <td>
+                            <div class="reply-box">
+                                <input type="button" value="답변달기" class="replybtn table-btn">
+                                <div class="reply-modal modal-closed">
+                                    <form action="#" class="reply-form" method="get">
+                                        <textarea name="replytext" class="reply-text" cols="60" rows="5"></textarea>
+                                            <input type="submit" class="reply-submit reply-modal-button" value="등록">
+                                            <input type="button" class="reply-modal-closebtn reply-modal-button" value="취소">
+                                    </form>
+                                </div>
+                            </div>
+                        </td>
+                    </tr> 
+                </tbody>
+            </table>
+            <div class="bottombtn-box">
+                <input type="button" value="전체선택" class="selectallbtn bottombtn">
+                <input type="button" value="선택삭제" class="bottom-deletebtn bottombtn">
+            </div>
+            <div class="pagenate">
+                <ul class="pagenation">
+                    <li class="pagenatebtn-prev"><a href="#">prev</a></li>
+                    <li class="pagenatebtn"><a href="#">1</a></li>
+                    <li class="pagenatebtn"><a href="#">2</a></li>
+                    <li class="pagenatebtn"><a href="#">3</a></li>
+                    <li class="pagenatebtn"><a href="#">4</a></li>
+                    <li class="pagenatebtn"><a href="#">5</a></li>
+                    <li class="pagenatebtn-next"><a href="#">next</a></li>
+                </ul>
+            </div>     
+        </div>
+    </section>
+    <script src="js/admin_nav.js"></script>
+    <script src="js/admin_QandA.js"></script>
+</body>
+</html>

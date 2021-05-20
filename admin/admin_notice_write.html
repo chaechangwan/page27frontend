@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin write notice</title>
+    <script src="https://kit.fontawesome.com/e6f78261b2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/admin_nav.css">
+    <link rel="stylesheet" href="./css/admin_notice_write.css">
+</head>
+<body>
+    <nav>
+        <div class="side-title"><a href="#">관리자 모드</a></div>
+        <ul class="side-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">회원관리</a></li>
+            <li class="menu-dropdown">
+                <a href="#">게시판 관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu-dropdown">
+                <a href="#">상품관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown hide">
+                    <li><a href="#">상품 등록</a></li>
+                    <li><a href="#">상품 목록</a></li>
+                </ul>
+            </li>
+            <li><a href='#''>주문관리</a></li>
+            <li><a href='#'>운영설정</a></li>
+            <li><a href='#'>관리자 정보수정</a></li>
+            <li><a href='#'>LOGOUT</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="item">
+            <div class="item-caption">
+                <div class="item-title">글쓰기</div>
+            </div>
+            <div class="item-content">
+                <form action="#" method="get">
+                    <label class="subject-label">SUBJECT <input type="text" name="subject" class="subject"></label>
+                    <div class="editor">
+                        <textarea name="ir1" id="ir1" rows="30" cols="100">에디터에 기본으로 삽입할 글(수정 모드)이 없다면 이 value 값을 지정하지 않으시면 됩니다.</textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottombtn">
+                <input type="button" class="backbtn" value="뒤로가기">
+                <input type="button" class="submitbtn" value="저장하기">   
+            </div>
+        </div>
+
+    </section>
+    <script src="js/admin_nav.js"></script>
+    <script type="text/javascript" src="./smarteditor2/js/HuskyEZCreator.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var oEditors = [];
+        nhn.husky.EZCreator.createInIFrame({
+            oAppRef: oEditors,
+            elPlaceHolder: "ir1",
+            sSkinURI: "./smarteditor2/SmartEditor2Skin.html",
+            fCreator: "createSEditor2"
+        });
+    </script>
+</body>
+</html>

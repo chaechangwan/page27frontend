@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin user</title>
+    <script src="https://kit.fontawesome.com/e6f78261b2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/admin_nav.css">
+    <link rel="stylesheet" href="./css/admin_user.css">
+</head>
+<body>
+    <nav>
+        <div class="side-title"><a href="#">관리자 모드</a></div>
+        <ul class="side-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">회원관리</a></li>
+            <li class="menu-dropdown">
+                <a href="#">게시판 관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+            <li class="menu-dropdown">
+                <a href="#">상품관리 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown hide">
+                    <li><a href="#">상품 등록</a></li>
+                    <li><a href="#">상품 목록</a></li>
+                </ul>
+            </li>
+            <li><a href='#''>주문관리</a></li>
+            <li><a href='#'>운영설정</a></li>
+            <li><a href='#'>관리자 정보수정</a></li>
+            <li><a href='#'>LOGOUT</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="item">
+            <div class="item-caption">
+                <div class="item-title">회원 기본 정보</div>
+            </div>
+            <div class="item-content">
+                <table>
+                    <colgroup>
+                        <col width="15%"/>
+                        <col width="85%"/>
+                    </colgroup>
+                    <tr>
+                        <th>아이디</th>
+                        <td>sejchae</td>
+                    </tr>
+                    <tr>
+                        <th>이름</th>
+                        <td>채창완</td>
+                    </tr>
+                    <tr>
+                        <th>생년월일</th>
+                        <td>1994-04-06</td>
+                    </tr>
+                    <tr>
+                        <th>성별</th>
+                        <td>남자</td>
+                    </tr>
+                    <tr>
+                        <th>방문횟수</th>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <th>주문횟수</th>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>적립금</th>
+                        <td>2000원</td>
+                    </tr>
+                    <tr>
+                        <th>가입일</th>
+                        <td>2021-04-12</td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td>changwani@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th>휴대전화</th>
+                        <td>010-1234-5678</td>
+                    </tr>
+                    <tr>
+                        <th>일반전화</th>
+                        <td>02-1234-5678</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottombtn">
+                <input type="button" value="뒤로가기">   
+            </div>
+        </div>
+    </section>
+    <script src="js/admin_nav.js"></script>
+</body>
+</html>
