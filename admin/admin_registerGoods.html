@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin registerGoods</title>
     <script src="https://kit.fontawesome.com/e6f78261b2.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="./css/admin_nav.css">
     <link rel="stylesheet" href="./css/admin_registerGoods.css">
 </head>
@@ -38,7 +38,7 @@
         </ul>
     </nav>
     <section>
-        <form action="#" method="GET" enctype="multipart/form-data">
+        <form action="#" method="POST" enctype="multipart/form-data" onsubmit="return sendToServer()">
         <!-- 상품 기본정보 -->
         <div class="basic-info item">
             <div class="item-caption">
@@ -48,7 +48,7 @@
                 <div class="form-group">
                     <label class="form-label">상품분류</label>
                     <span class="cmode-box">
-                        <select name="cmode1">
+                        <select name="cmode1" class="cmode1">
                             <option value="">1차 분류</option>
                             <option value="outer">OUTER</option>
                             <option value="top">TOP</option>
@@ -57,10 +57,10 @@
                             <option value="acc">ACC</option>
                             <option value="shoes">SHOES</option>
                         </select>
-                        <select name="cmode2">
+                        <select name="cmode2" class="cmode2">
                             <option value="">2차 분류</option>
                         </select>
-                        <select name="cmode3">
+                        <select name="cmode3" class="cmode3">
                             <option value="">3차 분류</option>
                             <option value="7dc">NEW 7% DC</option>
                             <option value="best30">BEST30</option>
@@ -80,16 +80,15 @@
                     <label class="form-label">상품 이미지</label>
                     <span>
                         <div class="imgupload">
-                            <label class=imguploadbtn for="file">
+                            <label class=imguploadbtn for="upload_image">
                                 이미지 찾기
                             </label>
-                            <input type="file" id="file">
+                            <input type="file" name="upload_image[]" id="upload_image" multiple="multiple">
                         </div>
-                        <div class="img-box"><사진 나오는 공간></div>
+                        <div class="img-box"></div>
                         <div class="discription-box">
                             <div class="discription-blue">권장 이미지 사이즈(가로: 450px, 세로: 370px)</div>
                             <div class="discription-blue">파일 저장시 상품내용 저장 후 적용됩니다</div>
-                            <div class="discription-red">파일 삭제 시 바로 적용됩니다</div>
                         </div>
                     </span>
                 </div>

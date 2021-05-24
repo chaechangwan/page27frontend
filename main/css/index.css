@@ -1,16 +1,110 @@
 /* section */
-
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main_top {
+/*메인 carousel start*/
+
+.carousel_container {
     width: 1260px;
     height: 700px;
     margin-bottom: 65px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
 }
+
+.carousel_container input[type=radio]{
+    display: none;
+}
+
+.carousel_container a {
+    transition: 1s;
+}
+
+.carousel_container a img{
+    display: block;
+}
+
+.carousel_container .manualbtns {
+    width: 1260px;
+    position: absolute;
+    left: 0;
+    top: 660px;
+    display: flex;
+    justify-content: center;
+}
+
+.manualbtns .manualbtn {
+    width: 80px;
+    height: 8px;
+    background-color: #efece9;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.manualbtns .manualbtn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.manualbtns .manualbtn:hover {
+    background-color: #969696;
+}
+
+.arrowbtns {
+    width: 1260px;
+    position: absolute;
+    top: 320px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color: #efece9;
+    padding: 0 12px;
+}
+
+.arrowbtns i {
+    transition: 0.2s;
+}
+.arrowbtns i:hover {
+    font-size: 40px;
+    color: #e4e6e8;
+}
+
+
+#radio1:checked ~ .first_img {
+    margin-left: 0;
+}
+#radio2:checked ~ .first_img {
+    margin-left: -100%;
+}
+#radio3:checked ~ .first_img {
+    margin-left: -200%;
+}
+#radio4:checked ~ .first_img {
+    margin-left: -300%;
+}
+#radio5:checked ~ .first_img {
+    margin-left: -400%;
+}
+
+#radio1:checked ~ .manualbtns .manualbtn:nth-child(1){
+    background-color: #333333;
+}
+#radio2:checked ~ .manualbtns .manualbtn:nth-child(2){
+    background-color: #333333;
+}
+#radio3:checked ~ .manualbtns .manualbtn:nth-child(3){
+    background-color: #333333;
+}
+#radio4:checked ~ .manualbtns .manualbtn:nth-child(4){
+    background-color: #333333;
+}
+#radio5:checked ~ .manualbtns .manualbtn:nth-child(5){
+    background-color: #333333;
+}
+/*메인 carousel end*/
+
 
 .main_bottom {
     width: 1260px;
@@ -51,25 +145,29 @@ section {
 }
 
 .weeklybest_menu .active{
-    border: 2px solid black;
+    border: 2px solid #333333;
+    color: #333333;
 }
 .weeklybest_menu span{
-    font-size: 12px;
+    font-size: 10px;
     display: inline-block;
-    padding: 6px 15px;
+    padding: 7px 17px;
     border: 2px solid #f0f0f0;
+    color: #88919f;
     border-radius: 50px;
     margin:10px;
     cursor: pointer;
 }
 
 .weeklybest_menu span:hover {
-    border: 2px solid black;
+    border: 2px solid #333333;
+    color: #333333;
 }
 
 .weeklybest_carousel {
     display: flex;
     justify-content: space-between;
+    transition: all 0.5s ease;
 }
 
 .weeklybest_carousel .w_carousel_mdpick {

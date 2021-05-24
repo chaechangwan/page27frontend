@@ -1,54 +1,82 @@
-//weeklybest carousel
 $(function(){
-    let wbc = $('.weeklybest_carousel').get();
-    let wbc_length = wbc.length;
-    wbc_idx = 0
-    let menu = $('.weeklybest_menu span').get();
-    menu_idx = 0
+    //main carousel
+    let count = 2 //타이머가 페이지 로드후 3초후 실행되기 때문에 3초후 페이지를 바로 2페이지로 바꿔주기위함
+    $('input[type=radio]').click(function(){
+        count = parseInt($(this).attr('id').substr(-1,1));
+    })
+    const mainCarousel_timer = setInterval(function(){
+        $('#radio'+count).prop('checked', true);
+        count = count%5+1;
+    }, 3000);
+
+    $('.fa-chevron-left').click(function(){
+        $('input[type=radio]').each(function(){
+            if($(this).is(':checked')){
+                count = parseInt($(this).attr('id').substr(-1, 1))-1;
+                if(count == 0){
+                    count = 5
+                }
+                return false;
+            }
+        })
+        $('#radio'+count).prop('checked', true);
+    })
+
+    $('.fa-chevron-right').click(function(){
+        $('input[type=radio]').each(function(){
+            if($(this).is(':checked')){
+                count = parseInt($(this).attr('id').substr(-1, 1)) + 1;
+                if(count == 6){
+                    count = 1
+                }
+                return false;
+            }
+        })
+        $('#radio'+count).prop('checked', true);
+    })
+    
+
+
+    //weeklybest carousel
+    const wbc = $('.weeklybest_carousel').get();
+    const wbc_length = wbc.length;
+    const menu = $('.weeklybest_menu span').get();
+    let wbc_idx = 0;
+    let menu_idx = 0
     $('.weeklybest_menu span').each(function(){
         $(this).attr('menu_num', menu_idx);
         menu_idx += 1
     }) 
 
-    let timer = setInterval(function(){
-        for(let i = 0; i < wbc_length; i++){
-            if(i == wbc_idx){
-                $(menu[i]).addClass('active');
-            }else{
-                $(menu[i]).removeClass('active');
-            }
-        }
-
-        for(let i = 0; i < wbc_length; i++){
-            if(i == wbc_idx){
-                $(wbc[i]).show();
-            }else{
-                $(wbc[i]).hide();
-            }
-        }
-        wbc_idx = (wbc_idx + 1) % wbc_length;
-        clearTimeout(timer); //계속 돌게 하고싶으면 이 줄 지우면됨.
-    }, 1000);
-
 
     $('.weeklybest_menu span').on('click', function(){
-        wbc_idx = $(this).attr('menu_num');
-        for(let i = 0; i < wbc_length; i++){
+        wbc_idx = parseInt($(this).attr('menu_num'));
 
+        for(let i = 0; i < wbc_length; i++){
             if(i == wbc_idx){
                 $(this).addClass('active');
-
+                $(wbc[i]).show();
+                $(wbc[i]).css('opacity', '1');
             }else{
                 $(menu[i]).removeClass('active');
-            }
-        }
-
-        for(let i = 0; i < wbc_length; i++){
-            if(i == wbc_idx){
-                $(wbc[i]).show();
-            }else{
                 $(wbc[i]).hide();
             }
         }
     }) 
+
+    let wbc_timer = setInterval(function(){
+        for(let i = 0; i < wbc_length; i++){
+            if(i == wbc_idx){
+                $(menu[i]).addClass('active');
+                $(wbc[i]).show();
+                $(wbc[i]).css('opacity', '1');
+            }else{
+                $(menu[i]).removeClass('active');
+                $(wbc[i]).hide();
+                $(wbc[i]).css('opacity', '0');
+            }
+        }
+        wbc_idx = (wbc_idx + 1) % wbc_length;
+    }, 3000);
+
 })

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin Goodslist</title>
     <script src="https://kit.fontawesome.com/e6f78261b2.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
     <link rel="stylesheet" href="./css/admin_nav.css">
     <link rel="stylesheet" href="./css/admin_Goodslist.css">
 </head>
@@ -79,18 +79,18 @@
             <div class="goods-box-top">
                 <div>
                     선택된상품을
-                    <select>
+                    <select class="manage_option">
                         <option value="onsale">정상판매</option>
                         <option value="soldout">품절</option>
                         <option value="deletegoods">상품삭제</option>
                     </select>
-                    <input type="button" value="처리">
+                    <input type="button" id="managebtn" value="처리">
                 </div>
                 <div class="num-searched-box">
                     총 <b class="num-searched">0</b> 개의 상품이 검색되었습니다.
                 </div>
             </div>
-            <table class="user-table">
+            <table class="item-table">
                 <colgroup>
                     <col width="10%"/>
                     <col width="10%"/>
@@ -107,7 +107,17 @@
                 <tbody>
                     <tr>
                         <td><input type="checkbox" class="checkbox-select"></td>
-                        <td><img src="image/리뷰사진2.JPG" width="70px"></td>
+                        <td><img src="image/basket1.JPG" width="70px"></td>
+                        <td>
+                            <div class="item-name item-info"><a href="#">베이직 카고 팬츠</a></div>
+                            <div class="item-classification item-info">분류 : BOTTOM</div>
+                            <div class="item-price item-info">가격 : 14000원</div>
+                        </td>
+                        <td><input type="button" value="판매중"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox-select"></td>
+                        <td><img src="image/basket1.JPG" width="70px"></td>
                         <td>
                             <div class="item-name item-info"><a href="#">베이직 카고 팬츠</a></div>
                             <div class="item-classification item-info">분류 : BOTTOM</div>
@@ -131,5 +141,6 @@
         </div>
     </section>
     <script src="js/admin_nav.js"></script>
+    <script src="js/admin_Goodslist.js"></script>
 </body>
 </html>

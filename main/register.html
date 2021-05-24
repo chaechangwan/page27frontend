@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
-    <link rel="stylesheet" type="text/css" href="./css/editdata.css">
+    <link rel="stylesheet" type="text/css" href="./css/register.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <title>address_register</title>
+    <title>register</title>
     <script src="./js/jquery.js"></script>
     <script src="./js/header.js"></script>
-    <script src="./js/editdata.js"></script>
+    <script src="./js/register.js"></script>
 
 </head>
 <body>
@@ -261,18 +261,10 @@
     <!--section-->
     <section>
         <div class="section_caption">
-            ADDRESS
+            MEMBER JOIN
         </div>
-
-        <div class="member_type">
-            <div class="member_type_img"><img src="img/myshop/member.JPG" alt="사진"></div>
-            <div class="member_type_desc">
-                <div>저희 쇼핑몰을 이용해 주셔서 감사합니다. <b>홍길동</b> 님은 <b>[일반회원]</b> 이십니다</div>      
-            </div>
-        </div>
-
         <div class="section_content">
-            <form action="" method="GET" onsubmit="return sendit()">
+            <form action="" method="POST" onsubmit="return sendit()">
                 <table class="basicdata">
                     <colgroup>
                         <col width="120px"/>
@@ -293,15 +285,6 @@
                     <tr>
                         <th><label for="user_name">이름<span>＊</span></label></th>
                         <td><input type="text" name="user_name" id="user_name"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="sample6_postcode">주소<span>＊</span></label></th>
-                        <td>
-                            <input type="text" id="sample6_postcode" name="address1" placeholder="우편번호">
-                            <button onclick="sample6_execDaumPostcode()" id="postbtn"><span>우편번호</span><i class="fas fa-chevron-right"></i></button><br>
-                            <input type="text" id="sample6_address" name="address2" placeholder="주소" class="address_margin"> 기본주소<br>
-                            <input type="text" id="sample6_detailAddress" name="address3" placeholder="상세주소" class="address_margin"> 나머지주소
-                        </td>
                     </tr>
                     <tr>
                         <th><label for="home_number">일반전화</label></th>
@@ -349,22 +332,6 @@
                         <td><input type="text" name="email" id="email"></td>
                     </tr>
                     <tr>
-                        <th><label>이메일 수신여부<span>＊</span></label></th>
-                        <td>
-                            <label><input type="radio" name="email_receive" value="y"> 수신함</label>&nbsp;
-                            <label><input type="radio" name="email_receive" value="n" checked> 수신안함</label>
-                            <div>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</div>
-                        </td>
-                    </tr>
-                </table>
-                
-                <div class="additionaldata_caption">추가정보</div>
-                <table class="additionaldata">
-                    <colgroup>
-                        <col width="120px"/>
-                        <col width="auto"/>
-                    </colgroup>
-                    <tr>
                         <th><label for="birth_year">생년월일</label></th>
                         <td>
                             <input type="text" name="birthday[]" id="birth_year">
@@ -376,10 +343,9 @@
                         </td>
                     </tr>
                 </table>
+
                 <div class="bottombtn_box">
-                    <input type="submit" class="registerbtn bottombtn" value="회원정보수정" formaction="/update">
-                    <button class="cancelbtn bottombtn" onclick="location.href=''">취소</button>
-                    <input type="submit" class="withdrawbtn bottombtn" value="회원탈퇴" formaction="/withdraw">
+                    <input type="submit" class="registerbtn bottombtn" value="회원가입">
                 </div>
             </form>
         </div>

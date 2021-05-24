@@ -94,6 +94,11 @@ input[type='file'] {
     margin-bottom: 5px;
 }
 
+.img-box img {
+    width: 80px;
+    margin-right: 10px;
+}
+
 .imgupload .imguploadbtn {
     display: inline-block;
     color: var(--nav-font-color);

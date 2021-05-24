@@ -7,14 +7,20 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> <!-- 맨위 말풍선 폰트-->
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>index</title>
     <script src="./js/jquery.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/nav.js"></script>
 </head>
 <body>
     <!--header start-->
@@ -23,10 +29,20 @@
             <div class="top_menu">
                 <div class="top_list">
                     <a href="#" class="top_list_first">로그인</a>
-                    <a href="#">회원가입</a>
+                    <a href="#" class="arrow_box_wrapper">
+                        회원가입
+                        <div class="arrow_box_wrap">
+                            <div class="arrow_box">
+                                + 2000 P
+                            </div>
+                        </div>
+                    </a>
                     <a href="#">장바구니</a>
                     <a href="#">주문조회</a>
                     <a href="#">마이페이지</a>
+                </div>
+                <div class="logo_between">
+                    <a href="#"><img src="img/logo-removebg-preview.png"></a>
                 </div>
                 <div class="top_board">
                     <a href="#">포토리뷰</a>
@@ -49,12 +65,13 @@
             </div>
         </div>
         <div class="top_logoArea">
-            <img src="img/logo-removebg-preview.png">
+            <a href="#"><img src="img/logo-removebg-preview.png"></a>
         </div>
         <div class="top_categoryArea">
             <div class="top_category">
                 <div class="menu_cell menu_cell_drop">
                     <i class="fas fa-bars"></i>
+                    <!-- sub category 전부 나오는 드롭다운 메뉴-->
                     <div class="menu_cell_dropdown">
                         <div class="menu_cell_dropdown_left menu_cell_dropdown_sub">
                             <div class="submenu">
@@ -148,6 +165,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- sub category-->
                 <div class="menu_cell menu_cell_category">
                     <span><a href="#">NEW 7% DC</a></span>
                     <span><a href="#">BEST 30</a></span>
@@ -260,7 +278,32 @@
     <section>
         <!--main-->
         <div class="carousel_container main_top">
-            <img src="img/carouselimg1.JPG">
+            <input type="radio" id="radio1" name="radio" checked>
+            <input type="radio" id="radio2" name="radio">
+            <input type="radio" id="radio3" name="radio">
+            <input type="radio" id="radio4" name="radio">
+            <input type="radio" id="radio5" name="radio">
+
+            
+            <a href="#" class="first_img"><img src="img/main_carousel/carousel1.jpg"></a>
+            <a href="#"><img src="img/main_carousel/carousel2.jpg"></a>
+            <a href="#"><img src="img/main_carousel/carousel3.jpg"></a>
+            <a href="#"><img src="img/main_carousel/carousel4.jpg"></a>
+            <a href="#"><img src="img/main_carousel/carousel5.jpg"></a>
+            
+
+            <div class="manualbtns">
+                <label for="radio1" class="manualbtn"></label>
+                <label for="radio2" class="manualbtn"></label>
+                <label for="radio3" class="manualbtn"></label>
+                <label for="radio4" class="manualbtn"></label>
+                <label for="radio5" class="manualbtn"></label>
+            </div>
+            <div class="arrowbtns">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
         </div>
         <div class="main_bottom">
             <img src="img/bestitem.JPG">
@@ -505,6 +548,62 @@
         </div>
         <!--newarrivals end-->
     </section>
+
+    <!--nav-->
+    <nav>
+        <div class="nav_content">
+            <div class="sidebtn_box">
+                <div class="slidebtn sidebtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="scrollup sidebtn">
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+                <div class="scrolldown sidebtn">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+
+            <form class="login_form">
+                <div class="login_inputs">
+                    <input type="text" name="userid" placeholder="ID">
+                    <input type="password" name="userpw" placeholder="PW">
+                </div>
+                <div class="login_join_btn_box">
+                    <input type="submit" class="loginbtn l_jbtn" value="LOGIN">
+                    <input type="button" class="joinbtn l_jbtn" value="JOIN US">
+                </div>
+                <div class="findbtn_box">
+                    <input type="button" class="findbtn" value="FIND ID">
+                    <input type="button" class="findbtn" value="FIND PW">
+                </div>
+            </form>
+            <div class="rightmenu">
+                <input type="button" class="delivery_check" value="배송조회">
+                <input type="button" class="rightmenubtn" value="쿠폰">
+                <input type="button" class="rightmenubtn" value="이벤트">
+                <input type="button" class="rightmenubtn" value="적립금">
+            </div>
+            <div class="cs_center">
+                <div class="cs_center_caption">CS CENTER</div>
+                <div class="cs_center_phone">010-2270-6149</div>
+                <div class="cs_center_desc">
+                    mon-fri / 9:00am - 20:00pm<br>
+                    lunch time / 12:00am - 13:00pm<br>
+                    sat, sun, holiday off 
+                </div>
+            </div>
+            <div class="bank">
+                <div class="line"></div>
+                BANK INFO<br>
+                우리은행: 12345-01-123456<br>
+                예금주:홍길동(페이지27)
+            </div>
+        </div>
+    </nav>
+
+    <!--footer-->
     <footer>
         <div class="footer_content">
             <div class="footer_content_left">

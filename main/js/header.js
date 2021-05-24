@@ -1,5 +1,5 @@
 $(function(){
-    //일정 스크롤 시 헤더 fixed
+    //일정 스크롤 시 헤더 fixed, 맨위 로고 나타남
     let top_menuArea = $('.top_menuArea').offset().top;
     let top_categoryArea = $('.top_categoryArea').offset().top;
     $(window).on('scroll', function(){
@@ -14,9 +14,11 @@ $(function(){
         if(top_categoryArea < window+45){
             $('.top_categoryArea').addClass('top_categoryArea_fixed');
             $('section').css('margin-top', '50px');
+            $('.logo_between img').fadeIn('fast');
         }else{
             $('.top_categoryArea').removeClass('top_categoryArea_fixed');
             $('section').css('margin-top', '0px');
+            $('.logo_between img').fadeOut('fast');
         }
     });
     
