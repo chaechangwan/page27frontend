@@ -176,3 +176,28 @@ form .formbtn_box .buynowbtn{
     background-color: #ffee2e;
     margin-top: 3px;
 }
+
+
+/*product_seperate*/
+.product_seperate{
+    width: 1260px;
+    margin-top: 200px;
+    border-top: 1px solid var(--border-color-basic);
+    padding: 10px 20px;
+    font-size: 13px;
+    color: var(--font-color-gray);
+    text-decoration: underline;
+}
+
+/*product_imageArea*/
+.product_imageArea {
+    margin-top: 120px;
+    width: 1260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product_imageArea img:not(:first-child){
+    margin-top: 140px;
+}

@@ -6,7 +6,7 @@ $(function(){
 
     // 초기 총 주문금액 및 결제 예정금액 산출
     $('.goods_price').each(function(){
-        total_price += parseInt($(this).val());
+        total_price += parseInt($(this).val()) * parseInt($(this).siblings('.item_quantity').val());
     })
     $('input[name=total_price]').val(total_price);
     $('#total').html(total_price);
@@ -26,8 +26,9 @@ $(function(){
     $('.deletebtn').click(function(){
         $('.check').each(function(){
             if($(this).is(':checked')){
-                total_price -= parseInt($(this).closest('tr').find('.goods_price').val());
-                $(this).closest('tr').remove();
+                let tr = $(this).closest('tr');
+                total_price -= parseInt(tr.find('.goods_price').val()) * parseInt(tr.find('.item_quantity').val()); 
+                tr.remove();
                 $('input[name=total_price]').val(total_price);
                 $('#total').html(total_price);
                 $('input[name=tobepaid_price]').val(total_price-discount);
@@ -74,6 +75,7 @@ $(function(){
                 contentType: 'application/json',
                 success:function(data){
                     alert(data);
+                    //서버로부터의 응답을 이용해 배송 정보 렌더링.
                 },
                 error:function(e){
                     alert(e.responseText);

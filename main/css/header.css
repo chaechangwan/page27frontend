@@ -16,7 +16,7 @@
 /* header */
 
 a {
-    color: #455a64;
+    color: var(--font-color-gray);
     text-decoration: none;
 }
 

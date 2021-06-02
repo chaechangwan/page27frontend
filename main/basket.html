@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" type="text/css" href="./css/basket.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">
@@ -14,6 +15,8 @@
     <title>basket</title>
     <script src="./js/jquery.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/basket.js"></script>
 </head>
 <body>
     <!--header start-->
@@ -22,10 +25,20 @@
             <div class="top_menu">
                 <div class="top_list">
                     <a href="#" class="top_list_first">로그인</a>
-                    <a href="#">회원가입</a>
+                    <a href="#" class="arrow_box_wrapper">
+                        회원가입
+                        <div class="arrow_box_wrap">
+                            <div class="arrow_box">
+                                + 2000 P
+                            </div>
+                        </div>
+                    </a>
                     <a href="#">장바구니</a>
                     <a href="#">주문조회</a>
                     <a href="#">마이페이지</a>
+                </div>
+                <div class="logo_between">
+                    <a href="#"><img src="img/logo-removebg-preview.png" alt="로고사진"></a>
                 </div>
                 <div class="top_board">
                     <a href="#">포토리뷰</a>
@@ -40,20 +53,21 @@
                         </ul>
                     </span>
                     <a href="#">고객센터</a>
-                    <a href="#" class="top_sns" onclick="location.href='https://www.facebook.com'"><img src="./img/facebook.png" alt=""></a>
-                    <a href="#" class="top_sns" onclick="location.href='https://www.instagram.com'"><img src="./img/instagram.png" alt=""></a>
-                    <a href="#" class="top_sns" onclick="location.href='https://www.youtube.com'"><img src="./img/youtube.png" alt=""></a>
+                    <a href="#" class="top_sns" onclick="location.href='https://www.facebook.com'"><img src="./img/facebook.png" alt="페이스북"></a>
+                    <a href="#" class="top_sns" onclick="location.href='https://www.instagram.com'"><img src="./img/instagram.png" alt="인스타그램"></a>
+                    <a href="#" class="top_sns" onclick="location.href='https://www.youtube.com'"><img src="./img/youtube.png" alt="유투브"></a>
                     
                 </div>
             </div>
         </div>
         <div class="top_logoArea">
-            <img src="img/logo-removebg-preview.png">
+            <a href="#"><img src="img/logo-removebg-preview.png" alt="로고사진"></a>
         </div>
         <div class="top_categoryArea">
             <div class="top_category">
                 <div class="menu_cell menu_cell_drop">
                     <i class="fas fa-bars"></i>
+                    <!-- sub category 전부 나오는 드롭다운 메뉴-->
                     <div class="menu_cell_dropdown">
                         <div class="menu_cell_dropdown_left menu_cell_dropdown_sub">
                             <div class="submenu">
@@ -147,6 +161,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- sub category-->
                 <div class="menu_cell menu_cell_category">
                     <span><a href="#">NEW 7% DC</a></span>
                     <span><a href="#">BEST 30</a></span>
@@ -164,7 +179,9 @@
                                 </ul>
                             </div>
                             <div class="category_img_box">
-                                <img src="./img/categorydrop/categorydropimg1.JPG" alt="사진">
+                                <a href="#">
+                                    <img src="./img/categorydrop/categorydropimg1.JPG" alt="카테고리 대표 사진">
+                                </a>
                             </div>
                         </div>
                     </span>
@@ -182,7 +199,9 @@
                                 </ul>
                             </div>
                             <div class="category_img_box">
-                                <img src="./img/categorydrop/categorydropimg2.JPG" alt="사진">
+                                <a href="#">
+                                    <img src="./img/categorydrop/categorydropimg2.JPG" alt="카테고리 대표 사진">
+                                </a>
                             </div>
                         </div>
                     </span>
@@ -198,7 +217,9 @@
                                 </ul>
                             </div>
                             <div class="category_img_box">
-                                <img src="./img/categorydrop/categorydropimg2.JPG" alt="사진">
+                                <a href="#">
+                                    <img src="./img/categorydrop/categorydropimg2.JPG" alt="카테고리 대표 사진">
+                                </a>
                             </div>
                         </div>
                     </span>
@@ -215,7 +236,9 @@
                                 </ul>
                             </div>
                             <div class="category_img_box">
-                                <img src="./img/categorydrop/categorydropimg2.JPG" alt="사진">
+                                <a href="#">
+                                    <img src="./img/categorydrop/categorydropimg2.JPG" alt="카테고리 대표 사진">
+                                </a>
                             </div>
                         </div>
                     </span>
@@ -235,7 +258,9 @@
                                 </ul>
                             </div>
                             <div class="category_img_box">
-                                <img src="./img/categorydrop/categorydropimg2.JPG" alt="사진">
+                                <a href="#">
+                                    <img src="./img/categorydrop/categorydropimg2.JPG" alt="카테고리 대표 사진">
+                                </a>
                             </div>
                         </div>
                     </span>
@@ -278,9 +303,9 @@
             </div>
 
             <div class="orderlist">
-                <div class="orderlist_caption">일반상품 (<span>0</span>)</div>
+                <div class="orderlist_caption">일반상품 (<span class="num_orders">0</span>)</div>
                 <div class="orderlist_content">
-                    <table>
+                    <table class="orderlist_table">
                         <colgroup>
                             <col width="27px">
                             <col width="92px">
@@ -310,24 +335,49 @@
                         <tbody>
                             <tr>
                                 <td><input type="checkbox" class="check"></td>
-                                <td><img src="img/basket/basket1.JPG"></td>
+                                <td><img src="img/basket/basket1.JPG" alt="상품사진"></td>
                                 <td>
                                     <div>메카닉 패딩 야상점퍼</div>
-                                    <div>[옵션: 그레이/M size]</div>
+                                    <div>[옵션: 그레이]</div>
                                 </td>
-                                <td><b>₩39,000</b></td>
+                                <td><b>₩32,000</b></td>
                                 <td>
-                                    <input type="number" min="0" max="100" value="1">
-                                    <button onclick="" class="numberupdatebtn">변경</button>
+                                    <input type="number" min="0" max="100" value="4" class="item_quantity">
+                                    <button onclick="" class="numberupdatebtn">변경</button> <!--th:onclick으로 item_key 넘겨주기-->
                                 </td>
-                                <td><span class="order_mileage">390원</span></td>
+                                <td><span class="order_mileage">320</span>원</td>
                                 <td>기본배송</td>
                                 <td>배송비</td>
-                                <td>₩39,000</td>
+                                <td>₩<span class="order_price">32,000</span></td>
                                 <td>
                                     <button class="buyitbtn optionbtn">주문하기</button><br>
                                     <button class="deleteitbtn optionbtn">삭제</button>
                                 </td>
+                                <input type="hidden" class="basket_id" value="1">
+                                <input type="hidden" class="item_price" value="32000">
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="check"></td>
+                                <td><img src="img/basket/basket1.JPG" alt="상품사진"></td>
+                                <td>
+                                    <div>단가라 셔츠</div>
+                                    <div>[옵션: 화이트]</div>
+                                </td>
+                                <td><b>₩42,000</b></td>
+                                <td>
+                                    <input type="number" min="0" max="100" value="3" class="item_quantity">
+                                    <button onclick="" class="numberupdatebtn">변경</button> <!--th:onclick으로 item_key 넘겨주기-->
+                                </td>
+                                <td><span class="order_mileage">420</span>원</td>
+                                <td>기본배송</td>
+                                <td>배송비</td>
+                                <td>₩<span class="order_price">42,000</span></td>
+                                <td>
+                                    <button class="buyitbtn optionbtn">주문하기</button><br>
+                                    <button class="deleteitbtn optionbtn">삭제</button>
+                                </td>
+                                <input type="hidden" class="basket_id" value="2">
+                                <input type="hidden" class="item_price" value="42000">
                             </tr>
                         </tbody>
                     </table>
@@ -352,14 +402,14 @@
                             <th>결제 예정금액</th>
                         </tr>
                         <tr>
-                            <td>₩39,000</td>
-                            <td>+ ₩0</td>
-                            <td>= ₩39,000</td>
+                            <td>₩<span id="total">238,000</span></td>
+                            <td>+ ₩<span id="delivery_charge">0</span></td>
+                            <td>= ₩<span id="tobepaid">238,000</span></td>
                         </tr>
                     </table>
                     <div class="bottombtn_box2">
-                        <button class="buyallbtn bottombtn">전체상품주문</button>
-                        <button class="buyselectdbtn bottombtn">선택상품주문</button>
+                        <button class="buyallbtn bottombtn buymanybtn">전체상품주문</button>
+                        <button class="buyselectedbtn bottombtn buymanybtn">선택상품주문</button>
                     </div>
                     <!--검색결과가 있는 경우 없는 영역-->
                     <!-- <div class="nosearch">
@@ -370,6 +420,61 @@
             
         </div>
     </section>
+
+    <!--nav-->
+    <nav>
+        <div class="nav_content">
+            <div class="sidebtn_box">
+                <div class="slidebtn sidebtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="scrollup sidebtn">
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+                <div class="scrolldown sidebtn">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+
+            <form class="login_form">
+                <div class="login_inputs">
+                    <input type="text" name="userid" placeholder="ID">
+                    <input type="password" name="userpw" placeholder="PW">
+                </div>
+                <div class="login_join_btn_box">
+                    <input type="submit" class="loginbtn l_jbtn" value="LOGIN">
+                    <input type="button" class="joinbtn l_jbtn" value="JOIN US">
+                </div>
+                <div class="findbtn_box">
+                    <input type="button" class="findbtn" value="FIND ID">
+                    <input type="button" class="findbtn" value="FIND PW">
+                </div>
+            </form>
+            <div class="rightmenu">
+                <input type="button" class="delivery_check" value="배송조회">
+                <input type="button" class="rightmenubtn" value="쿠폰">
+                <input type="button" class="rightmenubtn" value="이벤트">
+                <input type="button" class="rightmenubtn" value="적립금">
+            </div>
+            <div class="cs_center">
+                <div class="cs_center_caption">CS CENTER</div>
+                <div class="cs_center_phone">010-2270-6149</div>
+                <div class="cs_center_desc">
+                    mon-fri / 9:00am - 20:00pm<br>
+                    lunch time / 12:00am - 13:00pm<br>
+                    sat, sun, holiday off 
+                </div>
+            </div>
+            <div class="bank">
+                <div class="line"></div>
+                BANK INFO<br>
+                우리은행: 12345-01-123456<br>
+                예금주:홍길동(페이지27)
+            </div>
+        </div>
+    </nav>
+
     <footer>
         <div class="footer_content">
             <div class="footer_content_left">

@@ -14,6 +14,7 @@
     <title>address</title>
     <script src="./js/jquery.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/address.js"></script>
 </head>
 <body>
     <!--header start-->
@@ -296,20 +297,20 @@
                                 <td>010-7777-7777</td>
                                 <td>(05502)서울특별시 송파구 올림픽로 135 (잠실동) 리센츠</td>
                                 <td>
-                                    <button class="editaddrbtn" onclick="location.href=''"><span>수정</span><i class="fas fa-chevron-right"></i></button>
+                                    <button class="editaddrbtn" onclick="location.href=''" th:onclick=""><span>수정</span><i class="fas fa-chevron-right"></i></button>
                                 </td>
+                                <input type="hidden" class="address_key" value="1"> <!-- 배송지 index-->
                             </tr>
                         </tbody>
-                    </table>
-                    <div class="bottombtn_box">
-                        <button class="deletebtn bottombtn" onclick="location.href=''">선택 주소록 삭제</button>
-                        <button class="registerbtn bottombtn" onclick="location.href=''">배송지 등록</button>
-                    </div>
-
+                    </table>          
                     <!--검색결과가 있는 경우 없는 영역-->
                     <!-- <div class="nosearch">
                         적립내역이 없습니다.
                     </div> -->
+                    <div class="bottombtn_box">
+                        <button class="deletebtn bottombtn">선택 주소록 삭제</button>
+                        <button class="registerbtn bottombtn" onclick="location.href=''" th:onclick="">배송지 등록</button>
+                    </div>
 
                 </div>
             </div>

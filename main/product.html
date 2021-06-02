@@ -260,7 +260,7 @@
     <section>
         <div class="product_container">
             <div class="product_imgbox">
-                <img src="img/product/product1.JPG">
+                <img src="img/product/product1.JPG" alt="상품 메인 사진">
             </div>
             <div class="product_detail">
                 <div class="product_caption">
@@ -308,7 +308,7 @@
                     <div class="form-group">
                         <label>COLOR</label>
                         <span>
-                            <select name="product_color" class="select_color" form="buyform"> <!-- 넘어갈 데이터 -->
+                            <select name="item_color" class="select_color" form="buyform"> <!-- 넘어갈 데이터 -->
                                 <option value="00">-[필수] 옵션을 선택해 주세요-</option>
                                 <option value="베이지">베이지</option>
                                 <option value="네이비">네이비</option>
@@ -317,9 +317,9 @@
                         </span>
                     </div>
                 </div>
-                <form action="" method="GET" id="buyform"> <!-- 상품명, 색상, 수량 데이터 전송 -->
-                    <input type='hidden' class="price" value="35000"> <!-- 상품 1개의 가격이다(jquery에서 가격을 뽑기위해 선언)-->
-                    <input type='hidden' name="product_name" value=""> <!-- 넘어갈 데이터 --> <!-- 서버에서 받아온 상품명 value에 넣어줌-->
+                <form action="" method="POST" id="buyform" onsubmit="return sendorder()"> <!-- 상품명, 색상, 수량 데이터 전송 -->
+                    <input type="hidden" class="price" value="35000"> <!-- 상품 1개의 가격이다(jquery에서 가격을 뽑기위해 선언)-->
+                    <input type="hidden" name="item_idx" value=""> <!-- 넘어갈 데이터 -->
                     
                     <table> <!-- table을 thead와 tbody로 나눠주지 않으면 jquery 정상작동 X-->
                         <colgroup>
@@ -356,6 +356,24 @@
             </div>
 
         </div>
+        <div class="product_seperate">
+            상품상세정보
+        </div>
+        <div class="product_imageArea">
+            <img src="./img/페이지27-특별한혜택.jpg" alt="특별한 혜택">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)0.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)1.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)2.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)3.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)4.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)5.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)6.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)7.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)8.jpg" alt="상품 사진">
+            <img src="./img/items/로하 린넨 블레이져 자켓(5color)9.jpg" alt="상품 사진">
+        </div>
+
+
     </section>
 
     <!--footer-->

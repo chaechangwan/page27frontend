@@ -112,6 +112,9 @@ td {
     padding: 15px;
     border-bottom: 1px solid var(--border-color-basic2);
 }
+.orderlist .orderlist_content table tr td .orderditemimg {
+    width: 80px;
+}
 
 .orderlist .orderlist_content .nosearch {
     padding: 50px 0px;
@@ -120,6 +123,7 @@ td {
     color: var(--font-color-gray2);
     border-bottom: 1px solid var(--border-color-basic);
 }
+
 
 /*pagenation*/
 .orderlist .pagenation {

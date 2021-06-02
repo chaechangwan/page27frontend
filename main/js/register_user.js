@@ -61,8 +61,9 @@ function sendit(){
     const user_pw = $('#user_password').val();
 
     if(!(exppw1.test(user_pw) || exppw2.test(user_pw) || exppw3.test(user_pw))){
-        alert("비밀번호 입력조건을 다시한번 확인해 주세요.")
+        alert("비밀번호 입력조건을 다시한번 확인해 주세요.");
         $('#user_password').val('');
+        $('#user_password_ok').val('');
         $('#user_password').focus();
         return false
     }

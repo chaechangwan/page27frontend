@@ -40,20 +40,4 @@ function sendit(){
         return false;
     }
 
-    //상품 번호 및 수량 데이터  JSON으로 만들어주기
-
-    let orderiteminfo = [];
-    let item_keys = $('.item_key').get();
-    let item_quantities = $('.item_quantity').get();
-    console.log
-    for(let i=0; i < item_keys.length; i++){
-        let key_quan = {}
-        let key = $(item_keys[i]).val();
-        let quan = $(item_quantities[i]).val();
-        key_quan = {item_key:key, item_quantity:quan}
-        orderiteminfo.push(key_quan);
-    }
-    
-    $('input[name=orderiteminfo]').val(JSON.stringify(orderiteminfo));
-
 }
